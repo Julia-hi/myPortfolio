@@ -3,21 +3,21 @@
     src: url('fonts/Tourney/Tourney-Italic-VariableFont_wdth,wght.ttf') format('truetype') ;
     font-weight: normal;
     font-style: italic;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Tourney';
     src: url('fonts/Tourney/Tourney-VariableFont_wdth,wght.ttf') format('truetype') ;
     font-weight: bold;
     font-style: normal;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Baloo2';
     src: url('fonts/Baloo_2/Baloo2-Regular.ttf') format('truetype') ;
     font-weight: lighter;
     font-style: normal;
-  }
+}
 
 
 *{
@@ -31,12 +31,13 @@ body{
     display: block;
     background-color: #000;
     color: #fff;
-    font-size: 20px;
+    font-size: 24px;
     font-family: 'Baloo2';
     height: 100%;
     max-width: 2000px;
     justify-content: center;
     margin: auto;
+    
 }
 
 
@@ -56,7 +57,7 @@ header{
     height: 50px;
     position: fixed;
     z-index: 1000;
-    
+    top: 0;
 }
 
 .container{
@@ -67,15 +68,20 @@ header{
     height: 100%;
     width: 100%;
     float: left;
-}
+    }
 
 .cont_1{
-    height: 800px;
+    height: 90vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 }
 
 .cont_2{
-    height: 800px;
+    height: fit-content;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
+
 .header nav{
     display: block;
     float: right;
@@ -133,10 +139,12 @@ li{
 
 .main{
     position: relative;
-    top: 50px;
+    display: block;
     height: min-content; 
-    min-height: 4000px ;
+    margin-top: 50px;
 }
+
+.main:after {content: '';    display: table;    clear: both;} /* for set height of main */
 
 .main__column_1{
     position: relative;
@@ -149,16 +157,20 @@ li{
     }
 
 .main__index{
+    background-image: url(img/brain_earth_2.png);
     background-repeat: no-repeat;
     background-position-y: center;
-    background-image: url(img/brain_earth_2.png);
+    background-position-x: center;
+    background-size: 100%;
 }
 
 .network{
     
     transition: transform 40s;
     float: left;
-    height: 450px;
+    max-height: 700px;
+    min-height: 250px;
+    
 }
 
 .network:hover{
@@ -183,8 +195,6 @@ li{
     
 }
 
-
-
 .main__content>h1{
     font-size: 4em;
     font-family: 'Tourney', 'Display';
@@ -195,16 +205,28 @@ li{
     font-weight: normal;
 }
 
+h3{
+    font-family: 'Tourney', 'Display'; 
+    font-size: 2em;
+}
+
 .about{
     
     width: 100%;
-    height: 100%;
+    height: fit-content;
+   margin-bottom: 50px;
+   padding-top: 50px;  /* for show the head of the content when user navigate from menu */
+}
+
+.about__biography, .contacts__content, .about__block{
    
+    margin-top: 20px;
 }
 
 .about__block{
     display: flex;
     height: 90%;
+    padding-top: 10px;
 }
 
 .about__content{
@@ -296,22 +318,31 @@ button>a{
 }
 .myemail{
     background-image: url("img/icon-email-white.svg");
+    background-size: 20px;
 }
 
 .myinsta{
-    background-image: url("img/pic_instagram_white.svg");   
+    background-image: url("img/pic_instagram_white.svg");  
+    background-size: 20px;
 }
 .mylinkedin{
-    background-image: url("img/pic_linkedin_white.svg");   
+    background-image: url("img/pic_linkedin_white.svg");  
+    background-size: 20px;
 }
 
 .mygit{
     background-image: url("img/pic-github.svg");   
+    background-size: 20px;
+}
+
+.contacts{
+    margin-top: 5vh;
 }
 
 .contacts a{
     text-decoration: none;
     color: blueviolet;
+    line-height: 20px;
 }
 
 /*   ---------- FOOTER ----------   */
@@ -323,8 +354,8 @@ button>a{
     height: 100px;
     width: 100%;
     justify-content: center;
-    
 }
+
 .copyright{
     position: relative;
     display: flex;
@@ -334,27 +365,51 @@ button>a{
 
 /*-----   RESPONSIVE  -----*/
 
-@media only screen and (max-width: 1260px){
+@media only screen and (max-width: 1260px){  /* for iPad */
+    body{
+        max-width: 100vw;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .header{
+        width: 100%;
+        height: fit-content;
+    }
+
     .container{
+        width: 100%;
         padding-left: 20px;
         padding-right: 20px;
     }
 
-   .cont_1{
-       height: 1200px;
+    .cont_1{
+        height: fit-content;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+
+   .cont_2{
+       height: fit-content;
+       margin-top: 20px;
    }
 
-    .main__column_1, .main__column_2{
+   .about__block{
+       display: block;
+   }
+
+    .main__column_1, .main__column_2, .about__column_1, .about__column_2{
         position: relative;
         display: block;
         
         width: 100%;
-        height: 50%;
+        height: fit-content;
         float: none;
-        padding: 40px;
+        clear: both;
         left: auto;
-        
+        margin-bottom: 10px;
     }
+
     .main__content{
         height: 100%;
     }
@@ -366,20 +421,123 @@ button>a{
         background-position-x: center;
         background-size: contain;
     }
+    
 
     .network{
         position: relative;
-        height: 100%;
+        height: 45vh;
         float: none;
         margin: auto;
         display: flex;
     }
 
+    .column_2{
+        height: fit-content;
+        padding-top: 50px;
+    }
 
-    .main__column_2{
+    .border_right, .border_left{
+        width: fit-content;
+        border: none;
+        text-align: center;
+        border-top: solid blueviolet 5px;
+        padding: 0;
+        margin: auto;
+    }
+
+    .about{
+        margin-bottom: 70px;
+        padding-top: 50px;  /* for show the head of section */
+    }
+
+    .about__content{
+        text-align: left;
+        padding-top: 20px;
+    }
+
+    .about__content li, .about__content img{
+        float: none;
+        display: block;
+    }
+
+    .about__biography, .contacts__content{
         position: relative;
         display: block;
         width: 100%;
-    }}
+        text-align: left;
+        padding-top: 20px;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    h3{
+        font-size: 1em;
+    }
+    
+}
+
+@media only screen and (max-width: 600px){ /* for small devices */
+    
+    #header{
+        height: 30px;
+    }
+
+    .header__link{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .header__menu{
+        justify-content: space-around;
+        margin: 0;
+        font-size: 0.6em;
+    }
+
+    .contacts{
+        margin-top: 30px;
+    }
+
+    .contacts__content{
+        margin-top: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 360px){ /* for super-small devices */
+      
+    .container{
+        padding: 0;
+    }
+
+    .cont_1{
+        height: 75vh;
+        margin-bottom: 30px;
+    }
+
+    .cont_2{
+        margin-top: 0;
+    }
+
+    .network{
+        height: 35vh;
+    }
+
+    .column_2{
+        padding-top: 10px;
+    }
+
+    .main__content{
+        line-height: 50px;
+    }
+
+    .main__content>h1{
+        font-size: 2.5em;
+    }
+    
+    .main__content>h2{
+        font-size: 0.8em;
+    }
+
+}
 
 
