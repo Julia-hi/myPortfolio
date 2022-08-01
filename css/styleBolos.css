@@ -1,0 +1,52 @@
+.line-height-1{
+    line-height: 40px;
+}
+
+.width-90{
+    width: 90px;
+}
+
+.bg-gray{
+    background-color: #ccc;
+}
+
+.bg-image{
+    background-image: url('../img/imgBolos/background.jpg');
+}
+
+.width-1000{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.height-500{
+    min-height: 500px;
+}
+
+main{
+    min-height: 100vh;
+}
+
+#bola-img{
+    width: 40px;
+   margin-top: 40px;
+   cursor: pointer;
+}
+
+.col-custome{
+    flex: 0 0 auto;
+    width: 10%;
+}
+
+.activo{
+    background-color: rgb(122, 166, 202);
+}
+
+.inclinado{
+    transform:rotate(45deg);
+}
+
+.swal2-container.swal2-center>.swal2-popup{
+    grid-row:3 !important;
+}

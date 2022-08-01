@@ -7,14 +7,14 @@
 
   @font-face {
     font-family: 'Tourney';
-    src: url('fonts/Tourney/Tourney-VariableFont_wdth,wght.ttf') format('truetype') ;
+    src: url('../fonts/Tourney/Tourney-VariableFont_wdth,wght.ttf') format('truetype') ;
     font-weight: bold;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'Baloo2';
-    src: url('fonts/Baloo_2/Baloo2-Regular.ttf') format('truetype') ;
+    src: url('../fonts/Baloo_2/Baloo2-Regular.ttf') format('truetype') ;
     font-weight: lighter;
     font-style: normal;
   }
@@ -33,9 +33,19 @@ body{
     color: #fff;
     font-size: 20px;
     font-family: 'Baloo2';
-    height: auto;
+    height: max-content;
     /*min-height: 2000px;*/
     
+}
+
+.center{
+    align-content: center;
+    text-align: center;
+    align-self: center;
+}
+
+.text_left{
+    text-align: left;
 }
 
 
@@ -50,6 +60,7 @@ header{
     background-color: #000;
     height: 50px;
     position: fixed;
+    top: 0;
     z-index: 1000;
     
 }
@@ -125,15 +136,13 @@ main{
     left: 0;
     height: 800px;
     width: 40%; 
-    
+    background-image: url(../img/brain_earth_2.png);
     background-repeat: no-repeat;
     background-position-y: center;
     
 }
 
-.main__index{
-    background-image: url(img/brain_earth_2.png);
-}
+
 
 #network{
     transition: transform 10s;
@@ -268,7 +277,12 @@ button>a{
     
 }
 
-.contacts__address{
+.contacts{
+    height: auto;
+    display: block;
+}
+
+.contacts_address{
     position: relative;
     display: block;
     padding-left: 40px;
@@ -279,22 +293,45 @@ button>a{
     
 }
 .myemail{
-    background-image: url("img/icon-email-white.svg");
+    background-image: url("../img/icon-email-white.svg");
 }
 
 .myinsta{
-    background-image: url("img/pic_instagram_white.svg");   
+    background-image: url("../img/pic_instagram_white.svg");   
 }
 .mylinkedin{
-    background-image: url("img/pic_linkedin_white.svg");   
+    background-image: url("../img/pic_linkedin_white.svg");   
 }
 
 .mygit{
-    background-image: url("img/pic-github.svg");   
+    background-image: url("../img/pic-github.svg");   
 }
 
 .contacts a{
     text-decoration: none;
+    color: blueviolet;
+}
+
+.demo_images{
+    display: block;
+    margin: 20px auto;
+    max-width: 60%;
+    width: auto;
+    height: auto;
+}
+
+.demo_button{
+    float: none;
+    border: solid 2px blueviolet;
+    border-radius: 3px;
+    width: auto;
+    padding: 5px 10px;
+    display: block;
+    place-self: center;
+    margin: 20px auto;
+}
+
+.demo_button a{
     color: blueviolet;
 }
 
@@ -303,12 +340,14 @@ button>a{
 .footer{
     position: relative;
     display: block;
-    
-    height: 100px;
+    min-height: 150px;
+    height: max-content;
     width: 100%;
     justify-content: center;
-    
+    margin-top: 50px;
+   padding: 20px;
 }
+
 .copyright{
     position: relative;
     display: flex;
