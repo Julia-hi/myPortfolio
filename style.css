@@ -1,0 +1,315 @@
+@font-face {
+    font-family: 'Tourney';
+    src: url('fonts/Tourney/Tourney-Italic-VariableFont_wdth,wght.ttf') format('truetype') ;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Tourney';
+    src: url('fonts/Tourney/Tourney-VariableFont_wdth,wght.ttf') format('truetype') ;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Baloo2';
+    src: url('fonts/Baloo_2/Baloo2-Regular.ttf') format('truetype') ;
+    font-weight: lighter;
+    font-style: normal;
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    display: block;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Baloo2';
+    height: auto;
+    /*min-height: 2000px;*/
+    
+}
+
+
+/*   ---------- HEADER ----------   */
+
+header{
+    
+    width: 100%;
+    
+}
+
+#header{
+    background-color: #000;
+    height: 50px;
+    position: fixed;
+    z-index: 1000;
+    
+}
+
+.container{
+    display: block;
+    position: relative;
+    padding-left: 140px;
+    padding-right: 140px;
+    height: 100%;
+    width: 100%;
+    float: left;
+}
+
+.header nav{
+    display: block;
+    float: right;
+}
+
+.header__menu{
+    position: relative;
+    display: flex;
+    height: 100%;
+    line-height: 40px;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2em;
+    right: 0;
+}
+
+.header__navigation{
+    display: block;
+    list-style: none;
+}
+
+li{
+    
+    text-decoration: none;
+    
+    float: left;
+    
+}
+
+.header__link{
+       
+    text-decoration: none;
+    color: #fff;
+    text-shadow: -1px 0 blueviolet, 0 1px blueviolet, 1px 0 blueviolet, 0 -1px blueviolet,5px 5px 6px blueviolet, -5px -5px 6px blueviolet;
+    border-bottom: solid 5px transparent ;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.header__link:hover{
+    border-color: blueviolet;
+    font-size: 110%;
+    
+}
+
+/*   ---------- MAIN ----------   */
+
+
+main{
+    height: max-content;
+    }
+
+.main__column_1{
+    position: relative;
+    display: flex;
+    float: left;
+    left: 0;
+    height: 800px;
+    width: 40%; 
+    
+    background-repeat: no-repeat;
+    background-position-y: center;
+    
+}
+
+.main__index{
+    background-image: url(img/brain_earth_2.png);
+}
+
+#network{
+    transition: transform 10s;
+    float: left;
+    height: 450px;
+}
+
+
+.main__column_2{
+    position: relative;
+    display: flex;
+    
+    right: 0;
+    height: 800px;
+    width: 60%;
+    }
+
+.main__content{
+    width: 100%;
+    margin-top: auto;
+    vertical-align: middle;
+    text-align: end;
+    margin: auto;
+    line-height: 100px;
+    
+}
+
+
+
+.main__content>h1{
+    font-size: 4em;
+    font-family: 'Tourney', 'Display';
+}
+
+.main__content>h2{
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.about{
+    
+    width: 100%;
+    min-height: 800px;
+    max-height: 1500px;
+   
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.about__block{
+    display: flex;
+    height: 80%;
+}
+
+.about__content{
+    width: 100%;
+    margin-top: auto;
+    vertical-align: middle;
+    text-align: left;
+    margin: auto;
+    line-height: 70px; 
+    justify-items: center;
+}
+
+.about>h2{
+    height: 10%;
+    text-transform:uppercase;
+    font-size: 2em;
+    margin-left: 55px;
+    font-family: 'Tourney', 'Display';
+}
+
+.about__column_1{
+    position: relative;
+    display: flex;
+    float: left;
+    left: 0;
+    
+    width: 60%;  
+}
+
+.about__column_2{
+    position: relative;
+    display: flex;
+    right: 0;
+    
+    width: 40%;  
+}
+
+.self{
+    display: flex;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    float: right;
+    
+    border-radius: 50%;
+}
+
+p{
+    line-height: normal;
+}
+
+button{
+    height: 80%;
+    width: 150px;
+    padding: 0,auto;
+    background-color: transparent;
+    border: solid 2px #fff;
+    font-size: 1.2em;
+    border-radius: 2px;
+}
+
+button>a{
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+    font-family: 'Baloo2';
+    line-height: 24px;
+}
+
+.border_right{
+    border-right: solid blueviolet 15px;
+    padding-right: 40px;
+}
+
+.border_left{
+    border-left: solid blueviolet 15px;
+    padding-left: 40px;
+}
+
+.contacts__address{
+    position: relative;
+    display: block;
+    padding-left: 40px;
+    margin-top: 10px;
+    background-size: 2%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    
+}
+.myemail{
+    background-image: url("img/icon-email-white.svg");
+}
+
+.myinsta{
+    background-image: url("img/pic_instagram_white.svg");   
+}
+.mylinkedin{
+    background-image: url("img/pic_linkedin_white.svg");   
+}
+
+.mygit{
+    background-image: url("img/pic-github.svg");   
+}
+
+.contacts a{
+    text-decoration: none;
+    color: blueviolet;
+}
+
+/*   ---------- FOOTER ----------   */
+
+.footer{
+    position: relative;
+    display: block;
+    
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    
+}
+.copyright{
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
