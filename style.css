@@ -42,7 +42,6 @@ body{
 /*   ---------- HEADER ----------   */
 
 header{
-    
     width: 100%;
     
 }
@@ -119,7 +118,7 @@ main{
     height: max-content;
     }
 
-.main__column_1{
+.main_column_1{
     position: relative;
     display: flex;
     float: left;
@@ -143,7 +142,7 @@ main{
 }
 
 
-.main__column_2{
+.main_column_2{
     position: relative;
     display: flex;
     
@@ -152,24 +151,26 @@ main{
     width: 60%;
     }
 
-.main__content{
+.main_content{
     width: 100%;
     margin-top: auto;
     vertical-align: middle;
     text-align: end;
     margin: auto;
     line-height: 100px;
-    
+    padding: 40px;
 }
 
+main .container{
+    grid-template-columns: auto auto;
+    }
 
-
-.main__content>h1{
+.main_content>h1{
     font-size: 4em;
     font-family: 'Tourney', 'Display';
 }
 
-.main__content>h2{
+.main_content>h2{
     font-size: 1.5em;
     font-weight: normal;
 }
@@ -189,7 +190,7 @@ main{
     height: 80%;
 }
 
-.about__content{
+.about_content{
     width: 100%;
     margin-top: auto;
     vertical-align: middle;
@@ -197,6 +198,7 @@ main{
     margin: auto;
     line-height: 70px; 
     justify-items: center;
+    padding: 40px;
 }
 
 .about>h2{
@@ -258,12 +260,12 @@ button>a{
 
 .border_right{
     border-right: solid blueviolet 15px;
-    padding-right: 40px;
+    
 }
 
 .border_left{
     border-left: solid blueviolet 15px;
-    padding-left: 40px;
+    
 }
 
 .contacts__address{
@@ -312,4 +314,28 @@ button>a{
     display: flex;
     height: 100%;
     align-items: center;
+}
+
+@media only screen and (max-width: 1470px) {
+    /* .main__column_1{
+        display: block;
+        width: 100%;
+    } */
+
+main>.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_column_1{
+    margin-top: 80px;
+    height: 400px;
+    width: auto;
+}
+
+.main_content{
+    text-align: center;
+}
+
 }
