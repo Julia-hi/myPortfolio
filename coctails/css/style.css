@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../img/bluepurple.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* .btn{
+    width: 100%;
+} */
+
+.card-body{
+    height: 150px;
+}

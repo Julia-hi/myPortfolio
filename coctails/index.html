@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coctails from all the World</title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container container-fluid pt-3 pb-3">
+        <h1 class="text-center text-white">Coctails TRASS</h1>
+        <div class="row">
+            <div class="col-sm-3">
+                <label for="ingr" class="text-white">Cocktails por ingredientes</label><br>
+                <select id="ingr" class="form-select my-2">
+                    <option value="0">Seleccione ...</option>
+
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <label for="category" class="text-white">Cocktaisl por categorías</label><br>
+                <select id="category" class="form-select my-2">
+                    <option value="0">Seleccione ...</option>
+                </select>
+            </div>
+
+            <div class="col-sm-3">
+                <label for="tipococt" class="text-white">Cocktails por tipo</label><br>
+                <select id="tipococt" class="form-select my-2">
+                    <option value="0">Seleccione ...</option>
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <label for="tipocopa" class="text-white">Cocktails por tipo copa</label><br>
+                <select id="tipocopa" class="form-select my-2">
+                    <option value="0">Seleccione ...</option>
+                </select>
+            </div>
+        </div>
+        <!-- Aqui se muestran coctales seleccionados-->
+        <div id="result" class="row my-3"></div>
+
+
+
+
+
+    </div>
+    </div>
+
+    <script src="../librerias/jquery-3.6.0.min.js"></script>
+    <script src="../librerias/sweetalert2.all.min.js"></script>
+    <script src="../librerias/crearXMLHTTP.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
